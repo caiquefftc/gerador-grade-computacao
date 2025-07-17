@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montador de Grade Final</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-spinner"></div>
+        <p>Planejando sua grade otimizada, aguarde...</p>
+    </div>
+    <div id="app-container">
+        <div id="sidebar">
+            <h2>Lista de Matérias</h2>
+            <div id="contador-progresso"></div>
+            <div id="sidebar-content"></div>
+        </div>
+        <div id="grades-wrapper"></div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
