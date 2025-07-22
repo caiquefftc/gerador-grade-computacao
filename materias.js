@@ -30,7 +30,7 @@ export const DADOS_CURSO = {
         { id: '3P7', nome: 'Humanidades e Ciências Sociais', creditos: 2, preRequisitos: { cursos: ['2P1'] }, horarios: [{ dia: 3, slots: [2, 4] }] }
     ],
     "4": [
-        { id: '4P1', nome: 'Equações Diferenciais Ordinárias I', creditos: 4, preRequisitos: { cursos: ['2P3', '3P2'] }, horarios: [{ dia: 3, slots: [2, 4, 5, 6] }] }, /**Original [10, 11, 12, 13]**/
+        { id: '4P1', nome: 'Equações Diferenciais Ordinárias I', creditos: 4, preRequisitos: { cursos: ['2P3', '3P2'] }, horarios: [{ dia: 3, slots: [10, 11, 12, 13] }] }, /**Original [10, 11, 12, 13]  [2, 4, 5, 6]**/
         { id: '4P2', nome: 'Eletromagnetismo', creditos: 5, preRequisitos: { cursos: ['2P4', '3P2'] }, horarios: [{ dia: 4, slots: [0, 1, 2, 4, 5] }] },
         { id: '4P3', nome: 'Redes de Computadores I', creditos: 4, preRequisitos: { cursos: ['1P4', '2P6'] }, horarios: [{ dia: 3, slots: [0, 1] }, { dia: 5, slots: [0, 1] }] },
         { id: '4P4', nome: 'Arquitetura de Computadores', creditos: 6, preRequisitos: { cursos: ['3P4'] }, horarios: [{ dia: 2, slots: [2, 4] }, { dia: 5, slots: [2, 4, 5, 6] }] },
