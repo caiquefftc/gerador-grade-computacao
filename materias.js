@@ -1,4 +1,4 @@
-const DADOS_CURSO = {
+export const DADOS_CURSO = {
     "1": [
         { id: '1A', nome: 'Introdução a Engenharia', creditos: 2, pr: '', horarios: "Quinta - 07:00 às 08:40" },
         { id: '1B', nome: 'Administração e Organização Empresarial', creditos: 2, pr: '', horarios: "Segunda - 10:50 às 12:30" },
