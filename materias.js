@@ -1,80 +1,76 @@
-export const DADOS_CURSO = {
+const DADOS_CURSO = {
     "1": [
-        { id: '0P1', nome: 'Créditos de Optativas', creditos: 13, preRequisitos: {}, horarios: [] },
-        { id: '0P2', nome: 'Créditos de Eletivas', creditos: 6, preRequisitos: {}, horarios: [] },
-        { id: '1P1', nome: 'Introdução a Engenharia', creditos: 2, preRequisitos: {}, horarios: [{ dia: 4, slots: [0, 1] }] },
-        { id: '1P2', nome: 'Administração e Organização Empresarial', creditos: 2, preRequisitos: {}, horarios: [{ dia: 1, slots: [5, 6] }] },
-        { id: '1P3', nome: 'Geometria Analítica', creditos: 3, preRequisitos: {}, horarios: [{ dia: 2, slots: [5, 6] }, { dia: 2, slots: [8] }] },
-        { id: '1P4', nome: 'Pré-Cálculo', creditos: 3, preRequisitos: {}, horarios: [{ dia: 4, slots: [2, 4, 5] }] },
-        { id: '1P5', nome: 'Introdução a Ciência da Computação', creditos: 3, preRequisitos: {}, horarios: [{ dia: 3, slots: [0, 1, 2] }] },
-        { id: '1P6', nome: 'Lógica para Computação', creditos: 3, preRequisitos: {}, horarios: [{ dia: 2, slots: [1, 2, 4] }] },
-        { id: '1P7', nome: 'Projeto de Interação', creditos: 2, preRequisitos: {}, horarios: [{ dia: 1, slots: [2, 4] }] },
-        { id: '1P8', nome: 'Leitura e Produção de Textos', creditos: 2, preRequisitos: {}, horarios: [{ dia: 5, slots: [5, 6] }] }
+        { id: '1A', nome: 'Introdução a Engenharia', creditos: 2, pr: '', horarios: "Quinta - 07:00 às 08:40" },
+        { id: '1B', nome: 'Administração e Organização Empresarial', creditos: 2, pr: '', horarios: "Segunda - 10:50 às 12:30" },
+        { id: '1C', nome: 'Geometria Analítica', creditos: 3, pr: '', horarios: "Terça - 10:50 às 12:30, Terça - 14:00 às 14:50" },
+        { id: '1D', nome: 'Pré-Cálculo', creditos: 3, pr: '', horarios: "Quinta - 08:40 às 11:40" },
+        { id: '1E', nome: 'Introdução a Ciência da Computação', creditos: 3, pr: '', horarios: "Terça - 07:00 às 09:30" },
+        { id: '1F', nome: 'Lógica para Computação', creditos: 3, pr: '', horarios: "Quarta - 07:50 às 10:50" },
+        { id: '1G', nome: 'Projeto de Interação', creditos: 2, pr: '', horarios: "Segunda - 08:40 às 10:50" },
+        { id: '1H', nome: 'Leitura e Produção de Textos', creditos: 2, pr: '', horarios: "Sexta - 10:50 às 12:30" }
     ],
     "2": [
-        { id: '2P1', nome: 'Ética Profissional', creditos: 2, preRequisitos: {}, horarios: [{ dia: 2, slots: [5, 6] }] },
-        { id: '2P2', nome: 'Cálculo a uma Variável', creditos: 5, preRequisitos: { cursos: ['1P3', '1P4'] }, horarios: [{ dia: 5, slots: [0, 1, 2] }, { dia: 4, slots: [5, 6] }] },
-        { id: '2P3', nome: 'Álgebra Linear', creditos: 4, preRequisitos: { cursos: ['1P1', '1P3', '1P4'] }, horarios: [{ dia: 4, slots: [0, 1] }, { dia: 3, slots: [0, 1] }] },
-        { id: '2P4', nome: 'Mecânica Clássica', creditos: 5, preRequisitos: { cursos: ['1P4'] }, horarios: [{ dia: 4, slots: [2, 4] }, { dia: 5, slots: [4, 5, 6] }] },
-        { id: '2P5', nome: 'Estruturas Discretas', creditos: 4, preRequisitos: { cursos: ['1P4', '1P5'] }, horarios: [{ dia: 3, slots: [2, 4, 5, 6] }] },
-        { id: '2P6', nome: 'Introdução a Programação', creditos: 4, preRequisitos: { cursos: ['1P5', '1P6'] }, horarios: [{ dia: 2, slots: [0, 1, 2, 4] }] },
-        { id: '2P7', nome: 'Introdução a Economia', creditos: 2, preRequisitos: { cursos: ['1P1'] }, horarios: [{ dia: 1, slots: [2, 4] }] }
+        { id: '2A', nome: 'Ética Profissional', creditos: 2, pr: '', horarios: "Terça - 10:50 às 12:30" },
+        { id: '2B', nome: 'Cálculo a uma Variável', creditos: 5, pr: '1C, 1D', horarios: "Sexta - 07:00 às 09:30, Quinta - 10:50 às 12:30" },
+        { id: '2C', nome: 'Álgebra Linear', creditos: 4, pr: '1A, 1C, 1D', horarios: "Quinta - 07:00 às 08:40, Quarta - 07:00 às 08:40" },
+        { id: '2D', nome: 'Mecânica Clássica', creditos: 5, pr: '1D', horarios: "Quinta - 08:40 às 10:50, Sexta - 10:00 às 12:30" },
+        { id: '2E', nome: 'Estruturas Discretas', creditos: 4, pr: '1D, 1E', horarios: "Quarta - 08:40 às 12:30" },
+        { id: '2F', nome: 'Introdução a Programação', creditos: 4, pr: '1E, 1F', horarios: "Terça - 07:00 às 10:50" },
+        { id: '2G', nome: 'Introdução a Economia', creditos: 2, pr: '1A', horarios: "Segunda - 08:40 às 10:50" }
     ],
     "3": [
-        { id: '3P1', nome: 'Introdução a Engenharia Ambiental', creditos: 2, preRequisitos: { cursos: ['1P1'] }, horarios: [{ dia: 1, slots: [0, 1] }] },
-        { id: '3P2', nome: 'Cálculo a várias Variáveis', creditos: 5, preRequisitos: { cursos: ['2P2'] }, horarios: [{ dia: 4, slots: [2, 4] }, { dia: 5, slots: [4, 5, 6] }] },
-        { id: '3P3', nome: 'Termodinâmica', creditos: 4, preRequisitos: { cursos: ['2P2', '2P4'] }, horarios: [{ dia: 4, slots: [0, 1] }, { dia: 5, slots: [1, 2] }] },
-        { id: '3P4', nome: 'Software Básico', creditos: 4, preRequisitos: { cursos: ['2P6'] }, horarios: [{ dia: 2, slots: [2, 4] }, { dia: 3, slots: [0, 1] }] },
-        { id: '3P5', nome: 'Algoritmos e Estruturas de Dados I', creditos: 6, preRequisitos: { cursos: ['2P5', '2P6'] }, horarios: [{ dia: 1, slots: [2, 4, 5, 6] }, { dia: 3, slots: [5, 6] }] },
-        { id: '3P6', nome: 'Modelagem de Dados', creditos: 2, preRequisitos: { cursos: ['1P5'] }, horarios: [{ dia: 2, slots: [5, 6] }] },
-        { id: '3P7', nome: 'Humanidades e Ciências Sociais', creditos: 2, preRequisitos: { cursos: ['2P1'] }, horarios: [{ dia: 3, slots: [2, 4] }] }
+        { id: '3A', nome: 'Introdução a Engenharia Ambiental', creditos: 2, pr: '1A', horarios: "Segunda - 07:00 às 08:40" },
+        { id: '3B', nome: 'Cálculo a várias Variáveis', creditos: 5, pr: '2B', horarios: "Quinta - 08:40 às 10:50, Sexta - 10:00 às 12:30" },
+        { id: '3C', nome: 'Termodinâmica', creditos: 4, pr: '2B, 2D', horarios: "Quinta - 07:00 às 08:40, Sexta - 07:50 às 09:30" },
+        { id: '3D', nome: 'Software Básico', creditos: 4, pr: '2F', horarios: "Terça - 08:40 às 10:50, Quarta - 07:00 às 08:40" },
+        { id: '3E', nome: 'Algoritmos e Estruturas de Dados I', creditos: 6, pr: '2E, 2F', horarios: "Segunda - 08:40 às 12:30, Quarta - 10:50 às 12:30" },
+        { id: '3F', nome: 'Modelagem de Dados', creditos: 2, pr: '1E', horarios: "Terça - 10:50 às 12:30" },
+        { id: '3G', nome: 'Humanidades e Ciências Sociais', creditos: 2, pr: '2A', horarios: "Quarta - 08:40 às 10:50" }
     ],
     "4": [
-        { id: '4P1', nome: 'Equações Diferenciais Ordinárias I', creditos: 4, preRequisitos: { cursos: ['2P3', '3P2'] }, horarios: [{ dia: 3, slots: [10, 11, 12, 13] }] }, /**Original [10, 11, 12, 13]  [2, 4, 5, 6]**/
-        { id: '4P2', nome: 'Eletromagnetismo', creditos: 5, preRequisitos: { cursos: ['2P4', '3P2'] }, horarios: [{ dia: 4, slots: [0, 1, 2, 4, 5] }] },
-        { id: '4P3', nome: 'Redes de Computadores I', creditos: 4, preRequisitos: { cursos: ['1P4', '2P6'] }, horarios: [{ dia: 3, slots: [0, 1] }, { dia: 5, slots: [0, 1] }] },
-        { id: '4P4', nome: 'Arquitetura de Computadores', creditos: 6, preRequisitos: { cursos: ['3P4'] }, horarios: [{ dia: 2, slots: [2, 4] }, { dia: 5, slots: [2, 4, 5, 6] }] },
-        { id: '4P5', nome: 'Algoritmos e Estruturas de Dados II', creditos: 6, preRequisitos: { cursos: ['3P5'] }, horarios: [{ dia: 1, slots: [2, 4, 5, 6] }, { dia: 2, slots: [5, 6] }] },
-        { id: '4P6', nome: 'Banco de Dados', creditos: 4, preRequisitos: { cursos: ['2P6', '3P6'] }, horarios: [{ dia: 1, slots: [0, 1] }, { dia: 2, slots: [0, 1] }] }
+        { id: '4A', nome: 'Equações Diferenciais Ordinárias I', creditos: 4, pr: '2C, 3B', horarios: "Quarta - 15:40 às 17:20, Quinta - 15:40 às 17:20" },
+        { id: '4B', nome: 'Eletromagnetismo', creditos: 5, pr: '2D, 3B', horarios: "Segunda - 14:00 às 17:20" },
+        { id: '4C', nome: 'Redes de Computadores I', creditos: 4, pr: '1D, 2F', horarios: "Quarta - 07:00 às 08:40, Quinta - 07:00 às 08:40" },
+        { id: '4D', nome: 'Arquitetura de Computadores', creditos: 6, pr: '3D', horarios: "Terça - 08:40 às 10:50, Sexta - 08:40 às 12:30" },
+        { id: '4E', nome: 'Algoritmos e Estruturas de Dados II', creditos: 6, pr: '3E', horarios: "Segunda - 08:40 às 12:30, Terça - 10:50 às 12:30" },
+        { id: '4F', nome: 'Banco de Dados', creditos: 4, pr: '2F, 3F', horarios: "Segunda - 07:00 às 08:40, Terça - 07:00 às 08:40" }
     ],
     "5": [
-        { id: '5P1', nome: 'Probabilidade e Estatística', creditos: 3, preRequisitos: { cursos: ['2P2'] }, horarios: [{ dia: 1, slots: [0, 1, 2] }] },
-        { id: '5P2', nome: 'Sistemas Operacionais', creditos: 4, preRequisitos: { cursos: ['4P4'] }, horarios: [{ dia: 4, slots: [5, 6] }, { dia: 3, slots: [0, 1] }] },
-        { id: '5P3', nome: 'Redes de Computadores II', creditos: 6, preRequisitos: { cursos: ['4P3'] }, horarios: [{ dia: 4, slots: [0, 1, 2, 4] }, { dia: 5, slots: [0, 1] }] },
-        { id: '5P4', nome: 'Circuitos Lineares', creditos: 4, preRequisitos: { cursos: ['4P1', '4P2'] }, horarios: [{ dia: 3, slots: [2, 4, 5, 6] }] },
-        { id: '5P5', nome: 'Cálculo Numérico', creditos: 4, preRequisitos: { cursos: ['2P3', '2P6', '3P2'] }, horarios: [{ dia: 1, slots: [5, 6] }, { dia: 2, slots: [0, 1] }] },
-        { id: '5P6', nome: 'Engenharia de Software', creditos: 2, preRequisitos: { cursos: ['2P6'] }, horarios: [{ dia: 2, slots: [5, 6] }] },
-        { id: '5P7', nome: 'Programação Orientada a Objetos', creditos: 6, preRequisitos: { cursos: ['3P5'] }, horarios: [{ dia: 2, slots: [2, 4] }, { dia: 5, slots: [2, 4, 5, 6] }] }
+        { id: '5A', nome: 'Probabilidade e Estatística', creditos: 3, pr: '2B', horarios: "Segunda - 07:00 às 09:30" },
+        { id: '5B', nome: 'Sistemas Operacionais', creditos: 4, pr: '4D', horarios: "Quinta - 10:50 às 12:30, Quarta - 07:00 às 08:40" },
+        { id: '5C', nome: 'Redes de Computadores II', creditos: 6, pr: '4C', horarios: "Quinta - 07:00 às 10:50, Sexta - 07:00 às 08:40" },
+        { id: '5D', nome: 'Circuitos Lineares', creditos: 4, pr: '4A, 4B', horarios: "Segunda - 11:40 às 12:30, Terça - 10:50 às 12:30" },
+        { id: '5E', nome: 'Cálculo Numérico', creditos: 4, pr: '2C, 2F, 3B', horarios: "Segunda - 10:00 às 11:40, Terça - 07:00 às 08:40" },
+        { id: '5F', nome: 'Engenharia de Software', creditos: 2, pr: '2F', horarios: "Terça - 10:50 às 12:30" },
+        { id: '5G', nome: 'Programação Orientada a Objetos', creditos: 6, pr: '3E', horarios: "Quarta - 08:40 às 10:50, Sexta - 08:40 às 12:30" }
     ],
     "6": [
-        { id: '6P1', nome: 'Sinais e Sistemas', creditos: 4, preRequisitos: { cursos: ['2P3', '4P1'] }, horarios: [{ dia: 1, slots: [2, 4] }, { dia: 4, slots: [2, 4] }] },
-        { id: '6P2', nome: 'Ondulatória e Física Moderna', creditos: 4, preRequisitos: { cursos: ['2P4', '3P2'] }, horarios: [{ dia: 1, slots: [5, 6] }, { dia: 3, slots: [4, 5] }] },
-        { id: '6P3', nome: 'Servidores de Redes', creditos: 6, preRequisitos: { cursos: ['5P3'] }, horarios: [{ dia: 4, slots: [5, 6] }, { dia: 5, slots: [2, 4, 5, 6] }] },
-        { id: '6P4', nome: 'Lab. de Circuitos Elétricos e Eletrônicos', creditos: 2, preRequisitos: { cursos: ['5P4'] }, horarios: [{ dia: 4, slots: [0, 1] }] },
-        { id: '6P5', nome: 'Eletrônica Analógica', creditos: 4, preRequisitos: { cursos: ['5P4'] }, horarios: [{ dia: 2, slots: [0, 1, 2, 4] }] },
-        { id: '6P6', nome: 'Linguagens Formais e Autômatos', creditos: 3, preRequisitos: { cursos: ['4P5'] }, horarios: [{ dia: 3, slots: [0, 1, 2] }] },
-        { id: '6P7', nome: 'Análise de Algoritmos', creditos: 4, preRequisitos: { cursos: ['4P5'] }, horarios: [{ dia: 2, slots: [5, 6] }, { dia: 5, slots: [0, 1] }] }
+        { id: '6A', nome: 'Sinais e Sistemas', creditos: 4, pr: '2C, 4A', horarios: "Terça - 08:40 às 10:50, Quinta - 08:40 às 10:50" },
+        { id: '6B', nome: 'Ondulatória e Física Moderna', creditos: 4, pr: '2D, 3B', horarios: "Segunda - 10:50 às 12:30, Quarta - 10:50 às 12:30" },
+        { id: '6C', nome: 'Servidores de Redes', creditos: 6, pr: '5C', horarios: "Quinta - 10:50 às 12:30, Sexta - 08:40 às 12:30" },
+        { id: '6D', nome: 'Lab. de Circuitos Elétricos e Eletrônicos', creditos: 2, pr: '5D', horarios: "Quarta - 14:00 às 15:40" },
+        { id: '6E', nome: 'Eletrônica Analógica', creditos: 4, pr: '5D', horarios: "Segunda - 08:40 às 10:50, Terça - 07:00 às 08:40" },
+        { id: '6F', nome: 'Linguagens Formais e Autômatos', creditos: 3, pr: '4E', horarios: "Quarta - 07:50 às 10:50" },
+        { id: '6G', nome: 'Análise de Algoritmos', creditos: 4, pr: '4E', horarios: "Terça - 10:50 às 12:30, Sexta - 07:00 às 08:40" }
     ],
     "7": [
-        { id: '7P1', nome: 'Técnicas Digitais', creditos: 6, preRequisitos: { cursos: ['6P4', '6P5'] }, horarios: [{ dia: 1, slots: [5, 6] }, { dia: 3, slots: [5, 6] }, { dia: 5, slots: [5, 6] }] },
-        { id: '7P2', nome: 'Programação Linear', creditos: 4, preRequisitos: { cursos: ['5P5'] }, horarios: [{ dia: 1, slots: [0, 1] }, { dia: 2, slots: [0, 1] }] },
-        { id: '7P3', nome: 'Processamento Digital de Sinais', creditos: 4, preRequisitos: { cursos: ['6P1'] }, horarios: [{ dia: 2, slots: [2, 4, 5, 6] }] },
-        { id: '7P4', nome: 'Metodologia Científica', creditos: 2, preRequisitos: { creditos: 162 }, horarios: [{ dia: 3, slots: [0, 1] }] }
+        { id: '7A', nome: 'Técnicas Digitais', creditos: 6, pr: '6D, 6E', horarios: "Segunda - 08:40 às 11:40, Quarta - 07:50 às 10:50" },
+        { id: '7B', nome: 'Programação Linear', creditos: 4, pr: '5E', horarios: "Segunda - 07:00 às 08:40, Terça - 08:40 às 10:50" },
+        { id: '7C', nome: 'Processamento Digital de Sinais', creditos: 4, pr: '6A', horarios: "Segunda - 11:40 às 14:50, Terça - 10:50 às 12:30" },
+        { id: '7D', nome: 'Metodologia Científica', creditos: 2, pr: '162 Créditos', horarios: "Quarta - 10:50 às 12:30" }
     ],
     "8": [
-        { id: '8P1', nome: 'Sistemas Distribuídos', creditos: 4, preRequisitos: { cursos: ['3P5', '5P2', '5P3'] }, horarios: [{ dia: 4, slots: [0, 1, 2, 4] }] },
-        { id: '8P2', nome: 'Microcontroladores e Sistemas Embarcados', creditos: 4, preRequisitos: { cursos: ['3P4', '7P1'] }, horarios: [{ dia: 1, slots: [1, 2] }, { dia: 5, slots: [1, 2] }] },
-        { id: '8P3', nome: 'Sistemas Inteligentes', creditos: 3, preRequisitos: { cursos: ['3P2', '5P1', '6P6'] }, horarios: [{ dia: 3, slots: [4, 5, 6] }] },
-        { id: '8P4', nome: 'Computação Gráfica', creditos: 3, preRequisitos: { cursos: ['2P3', '5P7'] }, horarios: [{ dia: 2, slots: [1, 2, 4] }] },
-        { id: '8P5', nome: 'Sistemas de Controle', creditos: 4, preRequisitos: { cursos: ['6P5'] }, horarios: [{ dia: 2, slots: [5, 6] }, { dia: 4, slots: [5, 6] }] }
+        { id: '8A', nome: 'Sistemas Distribuídos', creditos: 4, pr: '3E, 5B, 5C', horarios: "Quinta - 07:00 às 10:50" },
+        { id: '8B', nome: 'Microcontroladores e Sistemas Embarcados', creditos: 4, pr: '3D, 7A', horarios: "Terça - 10:50 às 12:30, Quinta - 10:50 às 12:30" },
+        { id: '8C', nome: 'Sistemas Inteligentes', creditos: 3, pr: '3B, 5A, 6F', horarios: "Quarta - 10:00 às 12:30" },
+        { id: '8D', nome: 'Computação Gráfica', creditos: 3, pr: '2C, 5G', horarios: "Segunda - 10:00 às 12:30" },
+        { id: '8E', nome: 'Sistemas de Controle', creditos: 4, pr: '6E', horarios: "Segunda - 07:50 às 09:30, Terça - 08:40 às 10:50" }
     ],
     "9": [
-        { id: '9P1', nome: 'Computação de Alto Desempenho', creditos: 4, preRequisitos: { cursos: ['4P5', '8P1'] }, horarios: [{ dia: 2, slots: [5, 6] }, { dia: 3, slots: [2, 4] }] },
-        { id: '9P2', nome: 'Trabalho de Conclusão de Curso I', creditos: 2, preRequisitos: { cursos: ['7P4'] }, horarios: [{ dia: 2, slots: [8, 9] }] }
+        { id: '9A', nome: 'Computação de Alto Desempenho', creditos: 4, pr: '4E, 8A', horarios: "Terça - 10:50 às 12:30, Quarta - 08:40 às 10:50" },
+        { id: '9B', nome: 'Trabalho de Conclusão de Curso I', creditos: 2, pr: '7D', horarios: "Terça - 07:00 às 08:40" }
     ],
     "10": [
-        { id: '10P1', nome: 'Trabalho de Conclusão de Curso II', creditos: 2, preRequisitos: { cursos: ['9P2'] }, horarios: [{ dia: 2, slots: [2, 4] }] }
-    ],
-    "optativas": [],
-    "outros": []
+        { id: '10A', nome: 'Trabalho de Conclusão de Curso II', creditos: 2, pr: '9B', horarios: "Terça - 07:00 às 08:40" }
+    ]
 };
